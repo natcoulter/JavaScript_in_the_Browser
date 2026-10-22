@@ -3,6 +3,22 @@
 function sayHello() {
     alert("Hello, world from javascript!");
 }
+
+
+function myLineUp() {
+    let form = document.getElementById('playerList');
+    form.addEventListener('submit', myLineUp(e)) {
+        e.preventDefault();
+        let checkboxes = document.getElementsByName('players');
+        let result = "";
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked == true) {
+                result += checkboxes[i] + "<br>";
+            }
+        }
+        console.log(result);
+    }
+}
 // This function will be called when the link is clicked
 // It shows an alert with a message
 // Ensure the DOM is fully loaded before attaching the event listener
